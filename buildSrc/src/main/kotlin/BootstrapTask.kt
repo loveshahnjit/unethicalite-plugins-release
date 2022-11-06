@@ -78,6 +78,11 @@ open class BootstrapTask : DefaultTask() {
                                 releases = mutableListOf(release)
                         )
                     }
+
+                    pluginFile.copyTo(
+                            Paths.get(bootstrapReleaseDir.toString(), "${it.project.name}-${it.project.version}.jar").toFile(),
+                            overwrite = true
+                    )
                 }
             }
 
