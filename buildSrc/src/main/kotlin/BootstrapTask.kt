@@ -48,6 +48,8 @@ open class BootstrapTask : DefaultTask() {
             val baseBootstrap = getBootstrap("$bootstrapDir/plugins.json")
                 ?: throw RuntimeException("Base bootstrap is null!")
 
+            plugins.addAll(baseBootstrap.map { it as JSONObject })
+
             project.subprojects.forEach {
                 if (it.project.properties.containsKey("PluginName") && it.project.properties.containsKey("PluginDescription")) {
                     var pluginAdded = false
