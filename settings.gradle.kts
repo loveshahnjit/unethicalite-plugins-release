@@ -36,6 +36,7 @@ include("unethical-chopper")
 include("unethical-cooker")
 include("unethical-bankpin")
 include("unethical-pickpocket")
+include("unethical-logout")
 
 for (project in rootProject.children) {
     project.apply {
