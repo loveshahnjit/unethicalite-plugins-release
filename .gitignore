@@ -23,5 +23,4 @@ runelite-client/dependencies.txt
 hs_err*
 replay_pid*
 release
-plugins.json
 test
