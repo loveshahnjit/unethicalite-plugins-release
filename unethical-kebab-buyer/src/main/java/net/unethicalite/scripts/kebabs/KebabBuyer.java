@@ -2,7 +2,6 @@ package net.unethicalite.scripts.kebabs;
 
 import net.unethicalite.api.plugins.Script;
 import net.unethicalite.scripts.kebabs.tasks.BankKebabs;
-import net.unethicalite.scripts.kebabs.tasks.BuyKebabs;
 import net.unethicalite.scripts.kebabs.tasks.ScriptTask;
 import net.runelite.client.plugins.PluginDescriptor;
 import org.pf4j.Extension;
@@ -14,7 +13,6 @@ public class KebabBuyer extends Script
 {
 	private static final ScriptTask[] TASKS = new ScriptTask[]{
 			new BankKebabs(),
-			new BuyKebabs()
 	};
 
 	/**

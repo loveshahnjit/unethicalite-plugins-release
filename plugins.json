@@ -7,7 +7,7 @@
     "id": "unethicalagility-plugin",
     "releases": [
       {
-        "date": "2022-12-03",
+        "date": "2022-12-04",
         "sha512sum": "C6DEE61965F67AF3BFFC51F7D93ACB0FCB2ED58D999322EB2919123E52AAC42855A5B0EA85060CA03B2FE24E77973B7878AA0A9746DE4A6C853BF5B5DEA86993",
         "version": "0.0.5",
         "url": "https://raw.githubusercontent.com/unethicalite/unethicalite-plugins-release/master/unethical-agility-0.0.5.jar",
@@ -23,7 +23,7 @@
     "id": "unethicalautologin-plugin",
     "releases": [
       {
-        "date": "2022-12-03",
+        "date": "2022-12-04",
         "sha512sum": "6B621DE34470D86FC0A01CA2189A8FF39E4CFD7502DDC78A6202B8317731968D8FD9E317B21229B8B024A945C546E389F16DDF6A46DAB9BDEFEE5FEF20B645FB",
         "version": "0.0.2",
         "url": "https://raw.githubusercontent.com/unethicalite/unethicalite-plugins-release/master/unethical-autologin-0.0.2.jar",
@@ -39,7 +39,7 @@
     "id": "unethicalbankpin-plugin",
     "releases": [
       {
-        "date": "2022-12-03",
+        "date": "2022-12-04",
         "sha512sum": "DF33F16FEE2425B6EB3C538A7D72B5367719A6CABDF7AD91BC1F984A1D590F4F5E5C17F5085789ADA59C8C1159BC3C8FDA0D392700CFF1B560D76625708AE25C",
         "version": "0.0.1",
         "url": "https://raw.githubusercontent.com/unethicalite/unethicalite-plugins-release/master/unethical-bankpin-0.0.1.jar",
@@ -55,7 +55,7 @@
     "id": "unethicalbutler-plugin",
     "releases": [
       {
-        "date": "2022-12-03",
+        "date": "2022-12-04",
         "sha512sum": "D6E96268EBB3A550AFF5637E1921EC5A198CF22D52B7CBD99790603F3201F68315C84289A66F021AC3B9362979BC58572610DC2394FACBF1862FC1945BA9F759",
         "version": "0.0.1",
         "url": "https://raw.githubusercontent.com/unethicalite/unethicalite-plugins-release/master/unethical-butler-0.0.1.jar",
@@ -71,7 +71,7 @@
     "id": "unethicalchopper-plugin",
     "releases": [
       {
-        "date": "2022-12-03",
+        "date": "2022-12-04",
         "sha512sum": "3196D2C2B55B3214DF4C81C49CD8F2163E1A5E8394C2095153402C5BCD2BCBBD63FD114432360A9E936B2292731509C7BD07D1E73D26DCF623A3CC2A3235203F",
         "version": "0.0.1",
         "url": "https://raw.githubusercontent.com/unethicalite/unethicalite-plugins-release/master/unethical-chopper-0.0.1.jar",
@@ -87,7 +87,7 @@
     "id": "unethicalcooker-plugin",
     "releases": [
       {
-        "date": "2022-12-03",
+        "date": "2022-12-04",
         "sha512sum": "7AB2710F636972566B75C4FF03D9A9A8BAFFD820C7CC4CA50DCBA8F392161C3C660099F0943A7BF2D570403FF81759E30EF45CDCB13A56B235419846406EA8AD",
         "version": "0.0.3",
         "url": "https://raw.githubusercontent.com/unethicalite/unethicalite-plugins-release/master/unethical-cooker-0.0.3.jar",
@@ -103,7 +103,7 @@
     "id": "unethicalexplorer-plugin",
     "releases": [
       {
-        "date": "2022-12-03",
+        "date": "2022-12-04",
         "sha512sum": "7DE0F207BEE867ECB2FEBB1CF2EBFD1F1241FE5DF7A752F366FD6A87A9E9D73273479177AE01AF054A828729B50032A978F3947153998332E559CE0105C98348",
         "version": "0.0.5",
         "url": "https://raw.githubusercontent.com/unethicalite/unethicalite-plugins-release/master/unethical-explorer-0.0.5.jar",
@@ -119,7 +119,7 @@
     "id": "unethicalfighter-plugin",
     "releases": [
       {
-        "date": "2022-12-03",
+        "date": "2022-12-04",
         "sha512sum": "2F1EFE66E4BB5E045924BE85A4CAB69F6721C93758BCA358384B8D0FA6BAA160AAC10210920FCE5ECCA13E61B5AD8289A9B18D3D53ECDFC66B54465FCBE27487",
         "version": "0.0.6",
         "url": "https://raw.githubusercontent.com/unethicalite/unethicalite-plugins-release/master/unethical-fighter-0.0.6.jar",
@@ -135,8 +135,8 @@
     "id": "unethicalkebabbuyer-plugin",
     "releases": [
       {
-        "date": "2022-12-03",
-        "sha512sum": "434899F1E0FAEB1D24B73C9E754AAACB419146DC761DBD86B49171CB48553CFA333EAD772F46A6C83769337DF686E9121AE99DA048444F31E9DF7982509C0B8D",
+        "date": "2022-12-04",
+        "sha512sum": "F0CC9DFB0E9FF161A2485F89F90F0D6B66F975562A683A65C27D961D3D687CCC4137DC985343D15C14B062C38FBD748FDA2F2C4AAAC2E89F5E9C01DD58E50106",
         "version": "0.0.1",
         "url": "https://raw.githubusercontent.com/unethicalite/unethicalite-plugins-release/master/unethical-kebab-buyer-0.0.1.jar",
         "requires": "^1.0.0"
@@ -151,7 +151,7 @@
     "id": "unethicallogout-plugin",
     "releases": [
       {
-        "date": "2022-12-03",
+        "date": "2022-12-04",
         "sha512sum": "F546F08E06E802EE6D5C906AB3C4392B2B0637A812CE462DCF6CFD0687549960F7DA84172496319796A12894D51E1E6A18B2949C909BEAAD17F8F50871172A39",
         "version": "0.0.1",
         "url": "https://raw.githubusercontent.com/unethicalite/unethicalite-plugins-release/master/unethical-logout-0.0.1.jar",
@@ -167,7 +167,7 @@
     "id": "unethicaloneclick-plugin",
     "releases": [
       {
-        "date": "2022-12-03",
+        "date": "2022-12-04",
         "sha512sum": "08BADBE78D03CED8F970792D58021B312DAA8EA48DBE49D147D115D1FEB80317C59E402676A031D930F6D63ADE0057AFEDC860BC20E0CFEC7E872E980115923B",
         "version": "0.0.1",
         "url": "https://raw.githubusercontent.com/unethicalite/unethicalite-plugins-release/master/unethical-oneclick-0.0.1.jar",
@@ -183,7 +183,7 @@
     "id": "unethicalpickpocket-plugin",
     "releases": [
       {
-        "date": "2022-12-03",
+        "date": "2022-12-04",
         "sha512sum": "BFF64D7142737AE56E789E54C9826EE59DB5F162E80FCA86DFB070676202B2A6275F5E5ED10BA1D9DFE75DFC0516B2C1B2D1212760AA882C9276FE097E790C18",
         "version": "0.0.6",
         "url": "https://raw.githubusercontent.com/unethicalite/unethicalite-plugins-release/master/unethical-pickpocket-0.0.6.jar",
