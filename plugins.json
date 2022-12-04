@@ -136,7 +136,7 @@
     "releases": [
       {
         "date": "2022-12-04",
-        "sha512sum": "502A5F7C5B448FE0CF8A0E5877C0E596D4C052A861A5B900E3014C56989B288888EBE1551FFA978E3736B34802ED2B95692790E21BE041EF01F65A6873CBB61A",
+        "sha512sum": "234167133572D02BD33F08006BE8F89F072696ED8C81A90642A3DB9EC10D8B3831987D6F01DA7937A0DF9E958120AF9E47C408B76E7CEC1D03D6678C2CDAA453",
         "version": "0.0.1",
         "url": "https://raw.githubusercontent.com/unethicalite/unethicalite-plugins-release/master/unethical-kebab-buyer-0.0.1.jar",
         "requires": "^1.0.0"
