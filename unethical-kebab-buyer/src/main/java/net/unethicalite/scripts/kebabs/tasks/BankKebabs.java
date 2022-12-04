@@ -16,6 +16,11 @@ public class BankKebabs implements ScriptTask {
 	private static final WorldPoint BANK_TILE = new WorldPoint(2444, 3083, 0);
 
 	@Override
+	public boolean validate() {
+		return !Inventory.contains(ItemID.SHARK) || !Inventory.contains(ItemID.COOKED_KARAMBWAN);
+	}
+
+	@Override
 	public int execute() {
 		Player local = Players.getLocal();
 		if (!Bank.isOpen()) {
@@ -32,7 +37,6 @@ public class BankKebabs implements ScriptTask {
 			if (booth == null || booth.distanceTo(local) > 20 || !Reachable.isInteractable(booth)) {
 				Movement.walkTo(BANK_TILE);
 				booth.interact("Use");
-				bank();
 			}
 
 
