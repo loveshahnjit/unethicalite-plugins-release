@@ -39,7 +39,7 @@ public class BankKebabs implements ScriptTask {
 				return 1000;
 			}
 
-			booth.interact("Bank");
+			booth.interact("Use");
 			Bank.depositAllExcept(
 					ItemID.DEATH_RUNE,
 					ItemID.EARTH_RUNE,
