@@ -24,9 +24,6 @@ public class KebabBuyer extends Script
 	@Override
 	public void onStart(String... args)
 	{
-		for (ScriptTask task : TASKS) {
-			int sleep = task.execute();
-		}
 	}
 
 	/**
