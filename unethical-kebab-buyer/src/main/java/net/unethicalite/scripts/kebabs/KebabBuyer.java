@@ -35,17 +35,12 @@ public class KebabBuyer extends Script
 	protected int loop()
 	{
 		// Here I use task-based logic. You can also just write the entire script logic
-		for (ScriptTask task : TASKS)
-		{
-			if (task.validate())
-			{
-				// Perform the task and store the sleep value
-				int sleep = task.execute();
-				// If this task blocks the next task, return the sleep value and the internal loop will sleep for this amount of time
-				if (task.blocking())
-				{
-					return sleep;
-				}
+		for (ScriptTask task : TASKS) {
+			// Perform the task and store the sleep value
+			int sleep = task.execute();
+			// If this task blocks the next task, return the sleep value and the internal loop will sleep for this amount of time
+			if (task.blocking()) {
+				return sleep;
 			}
 		}
 

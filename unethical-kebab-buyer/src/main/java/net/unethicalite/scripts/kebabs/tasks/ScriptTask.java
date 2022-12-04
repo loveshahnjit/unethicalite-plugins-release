@@ -7,13 +7,6 @@ public interface ScriptTask
 	 *
 	 * @return whether the task should be executed or not.
 	 */
-	boolean validate();
-
-	/**
-	 * The loop logic.
-	 *
-	 * @return the amount of milliseconds to sleep after execution.
-	 */
 	int execute();
 
 	/**
