@@ -1,4 +1,4 @@
-package net.unethicalite.scripts.kebabs.tasks;
+package net.unethicalite.scripts.banks.tasks;
 
 public interface ScriptTask
 {

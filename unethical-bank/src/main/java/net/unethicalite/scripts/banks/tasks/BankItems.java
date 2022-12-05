@@ -1,4 +1,4 @@
-package net.unethicalite.scripts.kebabs.tasks;
+package net.unethicalite.scripts.banks.tasks;
 
 import net.runelite.api.Item;
 import net.unethicalite.api.entities.Players;
@@ -13,43 +13,54 @@ import net.runelite.api.TileObject;
 import net.runelite.api.coords.WorldPoint;
 
 
-public class BankKebabs implements ScriptTask{
+public class BankItems implements ScriptTask
+{
 	private static final WorldPoint BANK_TILE = new WorldPoint(2444, 3083, 0);
 
 	Item food1 = Inventory.getFirst(ItemID.SHARK);
 	Item food2 = Inventory.getFirst(ItemID.COOKED_KARAMBWAN);
 	@Override
-	public boolean validate() {
+	public boolean validate()
+	{
 		if (food2.getQuantity() + food1.getQuantity() < 7 || !Inventory.contains(ItemID.SHARK)
-				|| !Inventory.contains(ItemID.COOKED_KARAMBWAN)){
+				|| !Inventory.contains(ItemID.COOKED_KARAMBWAN))
+		{
 			return true;
 		}
 		return false;
 	}
 
 	@Override
-	public int execute() {
+	public int execute()
+	{
 		Player local = Players.getLocal();
-		if (!Bank.isOpen()) {
-			if (!Movement.isRunEnabled()) {
+		if (!Bank.isOpen())
+		{
+			if (!Movement.isRunEnabled())
+			{
 				Movement.toggleRun();
 				return 1000;
 			}
 
-			if (Movement.isWalking()) {
+			if (Movement.isWalking())
+			{
 				return 1000;
 			}
 
-			TileObject booth = TileObjects.getFirstAt(BANK_TILE, x -> x.hasAction("Bank", "Collect"));
-			if (booth == null || booth.distanceTo(local) > 20 || !Reachable.isInteractable(booth)) {
+			TileObject booth = TileObjects.getFirstAt(BANK_TILE, x -> x.hasAction("Use", "Collect"));
+			if (booth == null || booth.distanceTo(local) > 20 || !Reachable.isInteractable(booth))
+			{
 				Movement.walkTo(BANK_TILE);
 
 			}
-			booth.interact("Bank");
+			booth.interact("Use");
 			return 3000;
-		} else {
+		}
+		else
+		{
 
-			if (food1 == null || food1.getQuantity() < 5) {
+			if (food1 == null || food1.getQuantity() < 5)
+			{
 				Bank.depositInventory();
 				Bank.withdraw(ItemID.ZULANDRA_TELEPORT, 10000, Bank.WithdrawMode.ITEM);
 				Bank.withdraw(ItemID.RUNE_POUCH, 1, Bank.WithdrawMode.ITEM);
@@ -63,7 +74,7 @@ public class BankKebabs implements ScriptTask{
 				Bank.withdraw(ItemID.SUPER_DEFENCE4, 1, Bank.WithdrawMode.ITEM);
 				return 1000;
 			}
-
+			/*
 			if ((Inventory.contains(ItemID.TANZANITE_FANG) || (Inventory.contains(ItemID.SERPENTINE_VISAGE))
 					|| (Inventory.contains(ItemID.MAGIC_FANG)) || (Inventory.contains(ItemID.UNCUT_ONYX)) ||
 					(Inventory.contains(ItemID.TANZANITE_MUTAGEN)) || (Inventory.contains(ItemID.MAGMA_MUTAGEN)) ||
@@ -75,9 +86,9 @@ public class BankKebabs implements ScriptTask{
 				Bank.depositAll(ItemID.TANZANITE_MUTAGEN);
 				Bank.depositAll(ItemID.MAGMA_MUTAGEN);
 				Bank.depositAll(ItemID.PET_SNAKELING);
+			*/
+
 				return 1000;
-			}
-			return 1000;
 		}
 	}
 }
