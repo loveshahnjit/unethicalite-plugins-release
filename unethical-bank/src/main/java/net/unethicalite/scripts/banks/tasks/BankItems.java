@@ -25,7 +25,7 @@ public class BankItems implements ScriptTask
 	{
 		if (food2.getQuantity() + food1.getQuantity() < 7 || !Inventory.contains(ItemID.SHARK)
 				|| !Inventory.contains(ItemID.COOKED_KARAMBWAN))
-				{
+		{
 			return true;
 		}
 		return false;
@@ -48,7 +48,7 @@ public class BankItems implements ScriptTask
 				return 1000;
 			}
 
-			TileObject booth = TileObjects.getFirstAt(BANK_TILE, x -> x.hasAction("Bank", "Collect"));
+			TileObject booth = TileObjects.getFirstAt(BANK_TILE, x -> x.hasAction("Use", "Collect"));
 			if (booth == null || booth.distanceTo(local) > 20 || !Reachable.isInteractable(booth))
 			{
 				Movement.walkTo(BANK_TILE);
@@ -57,30 +57,23 @@ public class BankItems implements ScriptTask
 
 				return 1000;
 			}
-			booth.interact("Bank");
-			bank();
+			booth.interact("Use");
+			Bank.depositInventory();
+			Bank.withdraw(ItemID.ZULANDRA_TELEPORT, 10000, Bank.WithdrawMode.ITEM);
+			Bank.withdraw(ItemID.RUNE_POUCH, 1, Bank.WithdrawMode.ITEM);
+			Bank.withdraw(ItemID.DEATH_RUNE, 10000, Bank.WithdrawMode.ITEM);
+			Bank.withdraw(ItemID.EARTH_RUNE, 10000, Bank.WithdrawMode.ITEM);
+			Bank.withdraw(ItemID.SHARK, 10, Bank.WithdrawMode.ITEM);
+			Bank.withdraw(ItemID.COOKED_KARAMBWAN, 10, Bank.WithdrawMode.ITEM);
+			Bank.withdraw(ItemID.TELEPORT_TO_HOUSE, 1, Bank.WithdrawMode.ITEM);
+			Bank.withdraw(ItemID.PRAYER_POTION4, 2, Bank.WithdrawMode.ITEM);
+			Bank.withdraw(ItemID.SUPER_RANGING_4, 1, Bank.WithdrawMode.ITEM);
+			Bank.withdraw(ItemID.SUPER_DEFENCE4, 1, Bank.WithdrawMode.ITEM);
 			return 1000;
 
 		}
 		return 1000;
 	}
-
-	public int bank()
-	{
-		Bank.depositInventory();
-		Bank.withdraw(ItemID.ZULANDRA_TELEPORT, 10000, Bank.WithdrawMode.ITEM);
-		Bank.withdraw(ItemID.RUNE_POUCH, 1, Bank.WithdrawMode.ITEM);
-		Bank.withdraw(ItemID.DEATH_RUNE, 10000, Bank.WithdrawMode.ITEM);
-		Bank.withdraw(ItemID.EARTH_RUNE, 10000, Bank.WithdrawMode.ITEM);
-		Bank.withdraw(ItemID.SHARK, 10, Bank.WithdrawMode.ITEM);
-		Bank.withdraw(ItemID.COOKED_KARAMBWAN, 10, Bank.WithdrawMode.ITEM);
-		Bank.withdraw(ItemID.TELEPORT_TO_HOUSE, 1, Bank.WithdrawMode.ITEM);
-		Bank.withdraw(ItemID.PRAYER_POTION4, 2, Bank.WithdrawMode.ITEM);
-		Bank.withdraw(ItemID.SUPER_RANGING_4, 1, Bank.WithdrawMode.ITEM);
-		Bank.withdraw(ItemID.SUPER_DEFENCE4, 1, Bank.WithdrawMode.ITEM);
-		return 1000;
-	}
-
 }
 
 
