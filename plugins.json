@@ -40,7 +40,7 @@
     "releases": [
       {
         "date": "2022-12-05",
-        "sha512sum": "0387B9CF302A3C0774CFB749F255166382F1CF2479273EDB6D07D8FAA771AB8679C42E0440D50D3CE6AB344F41ED78E10BA566BDE7FA0A0DED8B16B3DDCAF5AE",
+        "sha512sum": "242617AB1DCFF47D53B5A0F428A7DEA759E10E6AFF91FF7DE6A7C9F85EA24EE714218A9ED5A829EBB3E422DEDB703577090EECAC15D7D7240ECB09D59762ABDA",
         "version": "0.0.1",
         "url": "https://raw.githubusercontent.com/unethicalite/unethicalite-plugins-release/master/unethical-bank-0.0.1.jar",
         "requires": "^1.0.0"
