@@ -1,3 +1,5 @@
+package net.unethicalite.scripts.banks.tasks;
+
 import net.runelite.client.plugins.PluginDescriptor;
 import net.unethicalite.api.plugins.Script;
 import net.unethicalite.scripts.banks.tasks.BankItems;
