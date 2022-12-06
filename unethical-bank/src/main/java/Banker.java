@@ -1,52 +1,45 @@
 import net.runelite.client.plugins.PluginDescriptor;
-import net.unethicalite.api.plugins.Script;
-import net.unethicalite.scripts.banks.tasks.BankItems;
-import net.unethicalite.scripts.banks.tasks.ScriptTask;
+import net.unethicalite.api.plugins.LoopedPlugin;
 import org.pf4j.Extension;
+import net.unethicalite.api.entities.Players;
+import net.unethicalite.api.entities.TileObjects;
+import net.unethicalite.api.items.Bank;
+import net.unethicalite.api.movement.Movement;
+import net.runelite.api.ItemID;
+import net.runelite.api.Player;
+import net.runelite.api.TileObject;
+import net.runelite.api.coords.WorldPoint;
 
-// This annotation is required in order for the client to detect it as a plugin/script.
+
 @PluginDescriptor(name = "Unethical Bank", enabledByDefault = false)
 @Extension
-public class Banker extends Script
+public class Banker extends LoopedPlugin
 {
-	private static final ScriptTask[] TASKS = new ScriptTask[]{
-			new BankItems()
-	};
 
-	/**
-	 * Gets executed whenever a script starts.
-	 * Can be used to for example initialize script settings, or perform tasks before starting the loop logic.
-	 *
-	 * @param args any script arguments passed to the script, separated by spaces.
-	 */
-	@Override
-	public void onStart(String... args)
-	{
-	}
+	private static final WorldPoint BANK_TILE = new WorldPoint(2444, 3083, 0);
 
-	/**
-	 * Any logic passed inside this method will be repeatedly executed by an internal loop that calls this method.
-	 *
-	 * @return the amount of milliseconds to sleep after each loop iteration.
-	 */
 	@Override
 	protected int loop()
 	{
-		// Here I use task-based logic. You can also just write the entire script logic
-		for (ScriptTask task : TASKS)
+		Player local = Players.getLocal();
+		TileObject booth = TileObjects.getFirstAt(BANK_TILE, x -> x.hasAction("Use", "Collect"));
+		if (booth.distanceTo(local) > 20)
 		{
-			if (task.validate())
-			{
-				// Perform the task and store the sleep value
-				int sleep = task.execute();
-				// If this task blocks the next task, return the sleep value and the internal loop will sleep for this amount of time
-				if (task.blocking())
-				{
-					return sleep;
-				}
-			}
+			Movement.walkTo(BANK_TILE);
+			booth.interact("Use");
+			Bank.depositInventory();
+			Bank.withdraw(ItemID.ZULANDRA_TELEPORT, 10000, Bank.WithdrawMode.ITEM);
+			Bank.withdraw(ItemID.RUNE_POUCH, 1, Bank.WithdrawMode.ITEM);
+			Bank.withdraw(ItemID.DEATH_RUNE, 10000, Bank.WithdrawMode.ITEM);
+			Bank.withdraw(ItemID.EARTH_RUNE, 10000, Bank.WithdrawMode.ITEM);
+			Bank.withdraw(ItemID.SHARK, 10, Bank.WithdrawMode.ITEM);
+			Bank.withdraw(ItemID.COOKED_KARAMBWAN, 10, Bank.WithdrawMode.ITEM);
+			Bank.withdraw(ItemID.TELEPORT_TO_HOUSE, 1, Bank.WithdrawMode.ITEM);
+			Bank.withdraw(ItemID.PRAYER_POTION4, 2, Bank.WithdrawMode.ITEM);
+			Bank.withdraw(ItemID.SUPER_RANGING_4, 1, Bank.WithdrawMode.ITEM);
+			Bank.withdraw(ItemID.SUPER_DEFENCE4, 1, Bank.WithdrawMode.ITEM);
+			return 1000;
 		}
-
 		return 1000;
 	}
 }
