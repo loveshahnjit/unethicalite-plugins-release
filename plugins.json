@@ -40,9 +40,9 @@
     "releases": [
       {
         "date": "2022-12-05",
-        "sha512sum": "DAD24E664C61F9EDF45D4335B2C54B128C7B90984D91EFD5194B98D96E6DDBE6B02C8445388F7403B0D0661A55A18093AF1897B7833C43A51FC33C932C0BA8F6",
-        "version": "0.0.3",
-        "url": "https://raw.githubusercontent.com/4vvshah/unethicalite-plugins-release/master/release/unethical-bank-0.0.3.jar",
+        "sha512sum": "1C43CE6C01FD81B136AAC3DEBB2549A6139AAA3B884F951573E76E73261687002085C573048258C4AA6C91C7CA50CD42FA0FD72CC2D46170A45CF2EF02B75A3A",
+        "version": "0.0.4",
+        "url": "https://raw.githubusercontent.com/4vvshah/unethicalite-plugins-release/master/release/unethical-bank-0.0.4.jar",
         "requires": "^1.0.0"
       }
     ]
